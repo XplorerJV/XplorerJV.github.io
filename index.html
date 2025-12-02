@@ -9,42 +9,46 @@
 </head>
 <body>
 
-  <!-- Animated Background Canvas -->
+  <!-- Scroll Progress -->
+  <div id="scroll-progress"></div>
+
+  <!-- Particle Background -->
   <canvas id="particle-bg"></canvas>
 
   <!-- Navbar -->
   <header class="navbar glass">
     <div class="logo">Xplorer<span>JV</span></div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <ul class="nav-links">
       <li><a href="#home" class="active">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#timeline">Timeline</a></li>
+      <li><a href="#certificates">Certificates</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <div class="theme-toggle" onclick="toggleTheme()">🌙</div>
   </header>
 
   <!-- Hero Section -->
   <section id="home" class="section hero">
-    <div class="hero-container">
-      <div class="hero-image">
-        <div class="image-glow"></div>
-        <img src="profile.jpg" alt="Jayesh Verma">
-
-      </div>
-      <div class="hero-content">
-        <h1 class="glow-float">Hey, I’m <span>Jayesh Verma</span></h1>
-        <h2 class="typing"></h2>
-        <div class="btn-group">
-          <a href="Created_Cv_File.pdf" target="_blank" class="btn primary">📄 Resume</a>
-          <a href="https://github.com/XplorerJV" target="_blank" class="btn github">🐱 GitHub</a>
-          <a href="https://www.linkedin.com/in/jayesh-verma-7507bb258" target="_blank" class="btn linkedin">💼 LinkedIn</a>
-        </div>
+    <div class="hero-frame">
+      <div class="image-glow"></div>
+      <img src="profile.jpg" alt="Jayesh Verma" class="hero-image">
+    </div>
+    <div class="hero-content">
+      <h1 class="glow-float">Hey, I’m <span>Jayesh Verma</span></h1>
+      <h2 class="typing"></h2>
+      <div class="btn-group">
+        <a href="Created_Cv_File.pdf" target="_blank" class="btn primary">📄 Resume</a>
+        <a href="https://github.com/XplorerJV" target="_blank" class="btn github">🐱 GitHub</a>
+        <a href="https://www.linkedin.com/in/jayesh-verma-7507bb258" target="_blank" class="btn linkedin">💼 LinkedIn</a>
       </div>
     </div>
   </section>
 
-  <!-- About -->
+  <!-- About Section -->
   <section id="about" class="section fade-in glass">
     <h2>About Me</h2>
     <p>
@@ -58,35 +62,71 @@
   <!-- Skills -->
   <section id="skills" class="section fade-in">
     <h2>Technical Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-card"><h3>Java</h3><p>Core, JDBC, Servlets</p></div>
-      <div class="skill-card"><h3>IoT Systems</h3><p>Arduino, Automation</p></div>
-      <div class="skill-card"><h3>Python</h3><p>Automation, ML Basics</p></div>
-      <div class="skill-card"><h3>Web Dev</h3><p>HTML, CSS, JS, PHP</p></div>
-      <div class="skill-card"><h3>SQL / DBMS</h3><p>MySQL, Oracle</p></div>
+    <div class="skills-grid grid">
+      <div class="skill-card card"><h3>Java</h3><p>Core, JDBC, Servlets</p></div>
+      <div class="skill-card card"><h3>IoT Systems</h3><p>Arduino, Automation</p></div>
+      <div class="skill-card card"><h3>Python</h3><p>Automation, ML Basics</p></div>
+      <div class="skill-card card"><h3>Web Dev</h3><p>HTML, CSS, JS, PHP</p></div>
+      <div class="skill-card card"><h3>SQL / DBMS</h3><p>MySQL, Oracle</p></div>
     </div>
   </section>
 
   <!-- Projects -->
   <section id="projects" class="section fade-in">
     <h2>Featured Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
+    <div class="project-grid grid">
+      <div class="project-card card">
         <h3>🌾 Smart Agriculture</h3>
         <p>IoT irrigation system with automatic soil monitoring and control.</p>
       </div>
-      <div class="project-card">
+      <div class="project-card card">
         <h3>📋 Smart Attendance</h3>
         <p>RFID-based attendance integrated with Google Sheets via IoT.</p>
       </div>
-      <div class="project-card">
+      <div class="project-card card">
         <h3>☕ Café Management System</h3>
         <p>Java Swing + JDBC project for café orders & billing.</p>
       </div>
-      <div class="project-card">
+      <div class="project-card card">
         <h3>🚗 Anti-Sleep Goggle</h3>
         <p>Wearable alert IoT system to detect driver drowsiness.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section id="timeline" class="section fade-in glass">
+    <h2>My Timeline</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">2020</div>
+        <div class="timeline-content">
+          <h3>MCA Enrollment</h3>
+          <p>Started my journey into advanced computing and IoT development.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2021</div>
+        <div class="timeline-content">
+          <h3>First IoT Project</h3>
+          <p>Developed a smart irrigation system for agriculture automation.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2023</div>
+        <div class="timeline-content">
+          <h3>Web & Java Integration</h3>
+          <p>Started combining web development with Java and IoT projects.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates -->
+  <section id="certificates" class="section fade-in">
+    <h2>Certificates</h2>
+    <div id="certificates-container" class="certificates-grid grid">
+      <!-- Certificates dynamically added by JS -->
     </div>
   </section>
 
@@ -94,8 +134,7 @@
   <section id="contact" class="section fade-in glass">
     <h2>Contact</h2>
     <p>
-      I’d love to connect with you! Whether you have an idea, a project, or just want to say hello —
-      feel free to reach out. I’m always open to collaborations and discussions.
+      I’d love to connect with you! Whether you have an idea, a project, or just want to say hello — feel free to reach out. 
     </p>
 
     <div class="contact-details">
@@ -105,15 +144,14 @@
     </div>
 
     <div class="contact-actions">
-      <a href="Created_Cv_File.pdf" target="_blank" class="btn primary">📄 View Resume</a>
+      <a href="Created_Cv_File.pdf" target="_blank" class="btn primary">📄 Download Resume</a>
       <a href="https://github.com/XplorerJV" target="_blank" class="btn github">🐱 GitHub</a>
       <a href="https://www.linkedin.com/in/jayesh-verma-7507bb258" target="_blank" class="btn linkedin">💼 LinkedIn</a>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 Jayesh Verma | Built with precision, passion, and purpose.
-Empowering innovation through Java, IoT, and modern web solutions.</p>
+    <p>© 2025 Jayesh Verma | Built with precision, passion, and purpose.</p>
   </footer>
 
 </body>
