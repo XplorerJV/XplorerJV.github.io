@@ -77,7 +77,7 @@ function toggleMenu(){
 const certificates = [
   {src:'cert1.jpg', title:'Java Certification', desc:'Completed advanced Java programming course.'},
   {src:'cert2.jpg', title:'IoT Specialist', desc:'Internship Certification in IoT and embedded systems projects.'},
-  {src:'cert3.jpg', title:'Google Certifiction', desc:'Completed the certification on The Fundamentals of Digital Marketing'}
+  {src:'cert3.jpg', title:'Google Certification', desc:'Completed the certification on The Fundamentals of Digital Marketing'}
 ];
 
 const certContainer=document.getElementById('certificates-container');
@@ -87,4 +87,5 @@ certificates.forEach(cert=>{
   card.innerHTML=`<img src="${cert.src}" alt="${cert.title}"><h3>${cert.title}</h3><p>${cert.desc}</p>`;
   certContainer.appendChild(card);
 });
+
 
